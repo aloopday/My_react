@@ -292,4 +292,59 @@ be coming from your data, such as a database ID. React uses your
 keys to know what happened if your later insert, delete, or reorder
 the items.
 
+## Responding to events
 
+You can respond to events by declaring **handler functions** inside your components:
+
+## Notice how ```onClick={handleClick}```
+has no parentheses at the end!
+Do not call the event handler function: you only need to 
+***pass*** it down. React will call your event handler when 
+the user clicks the button.
+
+## Updating the screen
+
+Often, you'll want your component to "remember" some information 
+and display it. For example, maybe you want to count the number
+of times a button is clicked.To do this, add **state** to your 
+component.
+
+First, import ```useState``` from React:
+
+```import {useState} from 'react'```;
+
+Now you can declare a ***state*** variable inside your component:
+
+```
+function MyButton(){
+    const [count,setCount] =useState(0);
+}
+```
+You'll get two things from ```useState```: the current state ```count```,
+and the function  that lets you update it ```(setCount)```.
+You can give them any names, but the convention is to write
+``` [something, setSomething].```
+
+##
+The first time the button is displayed, ```count``` will be 
+```0``` because you passed ```0``` to ```useState()```. When
+you want to change state, call ```setCount()``` and pass
+the new value to it. Clicking this button will increment the 
+counter:
+
+## Using Hooks
+Functions starting with ```use``` are called ```Hooks```.
+```useState``` is a built-in hook provided by 
+React. You can find other built-in 
+Hooks in the ```API reference```
+You can also write your own Hooks by combining the existing ones.
+## Hooks are more ```restrictive``` 
+than other funcitons. You can only Hooks *** at the top of ```
+your components (or other Hooks). if your want to use ```useState```
+in a condition or a loop , 
+
+![alt text](image.png)
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
