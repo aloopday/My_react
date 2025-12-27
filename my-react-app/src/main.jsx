@@ -20,10 +20,13 @@ function App(){
   
   return(
     <>
+    
     <h2 style={{color:'red' }}>Welcome to my first button test.</h2>
     <MyButton />
     <AboutPage />
     <Profile />
+    <h2 style={{color:'orange'}}>Olivia you are so sweet, <br />
+    You will get the number 1!</h2>
     <p>This is my shopList</p>
      <button onClick={handleClick}>
             Clicked {count} times
